@@ -96,7 +96,7 @@ int sumSquareOddNumbers(int firstNum, int secondNum)
  return (sum);  
 } 
 
-//The main function begins
+//Part e) The main function begins
 int main()
 {
 
@@ -118,7 +118,7 @@ int main()
  cin >> secondNumber;
 
 //Calling the respective functions
- sumEven = sumEvenNumbers(firstNumber, secondNumber);
+ sumEven = sumEvenNumbers(firstNumber, secondNumber); 
  sumOdd = sumOddNumbers(firstNumber, secondNumber);
  sumSquareEven = sumSquareEvenNumbers(firstNumber, secondNumber);
  sumSquareOdd = sumSquareOddNumbers(firstNumber, secondNumber);
