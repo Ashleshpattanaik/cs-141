@@ -1,52 +1,58 @@
-#include <iostream>
+#include <iostream> //Including the library
 
 using namespace std;
 
-int largest(int i) 
+//A function to find the largest element of the array
+int klarge(int i, int array[]) 
 {
- int arrLarge[i], j, element;
- cout << "Enter the elements of the array" <<endl;
- for (j = 0;j < i; j++) 
- {
-  cin >> arrLarge[j] ;
- }
- int large = arrLarge[0] ;
+ int j, k1, large = array[0] ;
+ 
+//Loop for finding the largest element
  for (j = 0; j < i; j++) 
  {
-  if (large < arrLarge[j]) 
+  if (large < array[j]) 
   {
-   large = arrLarge[j];
-   element = j;
+   large = array[j];
+   k1 = j;
   }
  }
- cout <<element + 1 <<"th element, i.e., " << large <<" is the largest element" <<endl;        
+ cout <<k1 + 1 <<"th element, i.e., " << large <<" is the largest element" <<endl;        
 }
 
-int smallest(int i) 
+//A function to find the smallest element of the array
+int ksmall(int i, int array[]) 
 {
- int arrSmall[i], j, element;
- cout <<"Enter the elements of the array";
+ int j, k2, small = array[0] ;
+
+//Loop for finding the smallest element
  for (j = 0; j < i; j++) 
  {
-  cin >> arrSmall[j] ;
- }
- int small = arrSmall[0] ;
- for (j = 0; j < i; j++) 
- {
-  if (small > arrSmall[j]) 
+  if (small > array[j]) 
   {
-   small = arrSmall[j];
-   element = j;         
+   small = array[j];
+   k2 = j;         
   }
  }
- cout <<element + 1 <<"th element, i.e., " << small <<" is the smallest element" <<endl;        
+ cout <<k2 + 1 <<"th element, i.e., " << small <<" is the smallest element" <<endl;        
 }
 
+//The main function begins
 int main() 
 {
- int i,j;
+ int n,size; 
  cout <<"Enter the size of the array" <<endl;
- cin >>i ;
- largest(i);
- smallest(i);        
+ cin >>size;
+
+ int array[size];
+ cout <<"Enter the elements of the array" <<endl;
+  
+//Loop for entering the elements of the array
+ for (n = 0; n < size; n++) 
+ {
+  cin >> array[n] ;
+ }
+
+ klarge(size, array);
+ ksmall(size, array);        
 }
+//The program ends

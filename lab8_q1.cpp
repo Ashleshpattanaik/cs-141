@@ -1,23 +1,28 @@
-#include<iostream>
+#include<iostream> //Including the library
 
 using namespace std;
 
+//A function to find the sum of elements of an array
 void arrSum(int i) 
 {
- int j,  sum = 0,array [i] ;
+ int j,  sum = 0, array[i];
  cout <<"Enter the elements of array" <<endl;
- for (j = 0; j < i; j++) 
+
+//Loop for entering the elements of the array
+ for (j = 0; j < i; j++)  
  {  
-  cin >>array [j];
+  cin >>array[j];
  }
  
- for (j = 0; j < i; j++) 
+//Loop for adding up the elements
+ for (j = 0; j < i; j++)  
  {
-  sum = sum + array [j];
+  sum = sum + array[j];
  }
  cout <<"The sum of all the array elements is " << sum << endl; 
 }
 
+//The main function begins
 int main() 
 { 
  int n; 
@@ -26,3 +31,4 @@ int main()
  arrSum(n);
  return 0;
 }
+//Program ends
